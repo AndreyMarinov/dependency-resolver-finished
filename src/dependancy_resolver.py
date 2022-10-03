@@ -15,7 +15,7 @@ def read_json_file(file_name):
 def get_current_requirement(package_name) -> dict:
     """Function that is getting the needed required packages
 
-    :return: package_name: if json_content is true , returns the required packages
+    :return: package_name: if json_content, returns the required packages
     """
     json_content = read_json_file(FILE_NAME)
     for element in range(len(json_content['packages'])):
@@ -37,7 +37,7 @@ def get_required_packages(packages_list):
     """Function that is getting the required packages and appends them to new list
 
     :param: packages_list:
-    :return: packages_to_be_installed: list with the packages to be installed as require
+    :return: packages_to_be_installed: list with the packages to be installed as required
     """
     for package in packages_list:
         all_required = get_current_requirement(package)
